@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- LEFT SIDE: INPUT FORM -->
+        <div class="form-section">
+            <h1>📝 Build Your Resume</h1>
+            
+            <div class="info-box">
+                <p><strong>👋 Welcome!</strong> Fill in your details below. Fields marked with <span style="color: #e74c3c;">*</span> are required. Click "Generate Resume" when done!</p>
+            </div>
+
+            <!-- PERSONAL INFO -->
+            <h2>👤 Personal Information</h2>
+            
+            <div class="form-group">
+                <label>Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" placeholder="Example: John Doe">
+            </div>
+            
+            <div class="form-group">
+                <label>Email <span class="required">*</span></label>
+                <input type="email" id="email" placeholder="Example: john.doe@gmail.com">
+            </div>
+            
+            <div class="form-group">
+                <label>Phone Number <span class="hint">(optional)</span></label>
+                <input type="tel" id="phone" placeholder="Example: +91 98765 43210">
+            </div>
+            
+            <div class="form-group">
+                <label>Location <span class="hint">(optional)</span></label>
+                <input type="text" id="location" placeholder="Example: Mumbai, India">
+            </div>
+            
+            <div class="form-group">
+                <label>LinkedIn Profile <span class="hint">(optional)</span></label>
+                <input type="url" id="linkedin" placeholder="Example: linkedin.com/in/johndoe">
+            </div>
+            
+            <div class="form-group">
+                <label>About Me / Career Objective <span class="hint">(2-3 sentences)</span></label>
+                <textarea id="summary" placeholder="Example: A motivated computer science graduate seeking opportunities in software development. Passionate about web technologies and problem-solving. Eager to contribute to innovative projects."></textarea>
+            </div>
+
+            <!-- EDUCATION -->
+            <h2>🎓 Education</h2>
+            
+            <div class="education-item">
+                <div class="item-number">Education 1</div>
+                <div class="form-group">
+                    <label>Degree / Course Name</label>
+                    <input type="text" id="edu1-degree" placeholder="Example: Bachelor of Technology in Computer Science">
+                </div>
+                <div class="form-group">
+                    <label>College / University Name</label>
+                    <input type="text" id="edu1-school" placeholder="Example: XYZ University">
+                </div>
+                <div class="form-group">
+                    <label>Year / Duration</label>
+                    <input type="text" id="edu1-year" placeholder="Example: 2020 - 2024">
+                </div>
+                <div class="form-group">
+                    <label>Additional Details <span class="hint">(GPA, achievements)</span></label>
+                    <textarea id="edu1-info" placeholder="Example: CGPA: 8.5/10 | Dean's List 2023"></textarea>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="item-number">Education 2 <span class="hint" style="font-weight: normal;">(optional)</span></div>
+                <div class="form-group">
+                    <label>Degree / Course Name</label>
+                    <input type="text" id="edu2-degree" placeholder="Example: 12th Grade (HSC)">
+                </div>
+                <div class="form-group">
+                    <label>School Name</label>
+                    <input type="text" id="edu2-school" placeholder="Example: ABC High School">
+                </div>
+                <div class="form-group">
+                    <label>Year</label>
+                    <input type="text" id="edu2-year" placeholder="Example: 2020">
+                </div>
+                <div class="form-group">
+                    <label>Additional Details</label>
+                    <textarea id="edu2-info" placeholder="Example: Percentage: 85%"></textarea>
+                </div>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <h2>💼 Experience / Internships</h2>
+            <div class="info-box">
+                <p><strong>For Freshers:</strong> Include internships, projects, freelance work, or volunteer experience. If you have no experience yet, you can leave this section empty.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="item-number">Experience 1 <span class="hint" style="font-weight: normal;">(optional)</span></div>
+                <div class="form-group">
+                    <label>Job Title / Role</label>
+                    <input type="text" id="exp1-title" placeholder="Example: Web Development Intern">
+                </div>
+                <div class="form-group">
+                    <label>Company / Organization Name</label>
+                    <input type="text" id="exp1-company" placeholder="Example: Tech Solutions Pvt Ltd">
+                </div>
+                <div class="form-group">
+                    <label>Duration</label>
+                    <input type="text" id="exp1-duration" placeholder="Example: June 2023 - August 2023">
+                </div>
+                <div class="form-group">
+                    <label>What did you do? <span class="hint">(key responsibilities)</span></label>
+                    <textarea id="exp1-desc" placeholder="Example: Developed responsive web pages using HTML, CSS, and JavaScript. Collaborated with team to implement new features. Improved website loading speed by 30%."></textarea>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-number">Experience 2 <span class="hint" style="font-weight: normal;">(optional)</span></div>
+                <div class="form-group">
+                    <label>Job Title / Role</label>
+                    <input type="text" id="exp2-title" placeholder="Example: Campus Ambassador">
+                </div>
+                <div class="form-group">
+                    <label>Company / Organization Name</label>
+                    <input type="text" id="exp2-company" placeholder="Example: StartupXYZ">
+                </div>
+                <div class="form-group">
+                    <label>Duration</label>
+                    <input type="text" id="exp2-duration" placeholder="Example: Jan 2023 - May 2023">
+                </div>
+                <div class="form-group">
+                    <label>What did you do?</label>
+                    <textarea id="exp2-desc" placeholder="Example: Promoted brand on campus through social media. Organized tech events with 200+ participants."></textarea>
+                </div>
+            </div>
+
+            <!-- SKILLS -->
+            <h2>⚡ Skills</h2>
+            <div class="form-group">
+                <label>List your skills <span class="hint">(separate with commas)</span></label>
+                <textarea id="skills" placeholder="Example: HTML, CSS, JavaScript, Python, Java, React, Git, MySQL, Problem Solving, Team Work, Communication"></textarea>
+            </div>
+
+            <!-- BUTTONS -->
+            <button class="generate-btn" onclick="generateResume()">✨ Generate My Resume</button>
+            <button class="clear-btn" onclick="clearForm()">🗑️ Clear All Fields</button>
+        </div>
+
+        <!-- RIGHT SIDE: PREVIEW -->
+        <div class="preview-section">
+            <h1>👁️ Resume Preview</h1>
+            <div id="resumePreview" class="resume-preview">
+                <div class="empty-state">
+                    <div class="empty-state-icon">📄</div>
+                    <p><strong>Your resume will appear here</strong></p>
+                    <p>Fill in your details on the left and click<br>"Generate My Resume"</p>
+                </div>
+            </div>
+            <button class="download-btn" onclick="downloadResume()">📥 Download as PDF</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

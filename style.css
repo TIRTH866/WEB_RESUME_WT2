@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-section, .preview-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 8px;
+}
+
+.info-box {
+    background: #e8f4ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+label .required {
+    color: #e74c3c;
+}
+
+label .hint {
+    color: #999;
+    font-weight: normal;
+    font-size: 12px;
+    font-style: italic;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+.experience-item, .education-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #667eea;
+}
+
+.item-number {
+    background: #667eea;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.generate-btn, .download-btn, .clear-btn {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.generate-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.generate-btn:hover {
+    background: #229954;
+    transform: translateY(-2px);
+}
+
+.download-btn {
+    background: #3498db;
+    color: white;
+}
+
+.download-btn:hover {
+    background: #2980b9;
+}
+
+.clear-btn {
+    background: #95a5a6;
+    color: white;
+}
+
+.clear-btn:hover {
+    background: #7f8c8d;
+}
+
+.resume-preview {
+    background: white;
+    padding: 40px;
+    border: 1px solid #ddd;
+    min-height: 600px;
+    font-family: 'Times New Roman', serif;
+}
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    padding: 100px 20px;
+    font-size: 16px;
+}
+
+.empty-state-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 3px solid #2c3e50;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.resume-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.resume-contact {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.resume-section {
+    margin-bottom: 25px;
+}
+
+.resume-section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resume-item {
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+}
+
+.resume-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.resume-item-title {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 15px;
+}
+
+.resume-item-subtitle {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.resume-item-date {
+    color: #666;
+    font-size: 13px;
+}
+
+.resume-item-description {
+    color: #444;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: #ecf0f1;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    .form-section, .download-btn, .generate-btn, .clear-btn, h1 {
+        display: none;
+    }
+    .preview-section {
+        box-shadow: none;
+        padding: 0;
+    }
+    .container {
+        display: block;
+    }
+}
